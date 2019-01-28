@@ -1,0 +1,7 @@
+SELECT * FROM user_customer;
+SELECT * FROM user_seller;
+SELECT * FROM toko;
+SELECT * FROM kategori;
+SELECT * FROM produk;
+SELECT * FROM shop_cart;
+SELECT * FROM detail_cart;
