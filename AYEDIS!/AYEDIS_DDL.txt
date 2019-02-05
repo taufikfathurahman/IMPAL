@@ -50,7 +50,7 @@ create table produk
     foreign key(id_kategori) references kategori(id_kategori) on delete cascade
 );
 
-create table shop_chart
+create table shop_cart
 (
     id_shop_cart varchar(10),
     id_user_customer varchar(10),
@@ -64,6 +64,6 @@ create table detail_cart
     id_shop_cart varchar(10),
     id_produk varchar(10),
     jumlah integer,
-    foreign key(id_shop_cart) references shop_chart(id_shop_cart) on delete cascade,
+    foreign key(id_shop_cart) references shop_cart(id_shop_cart) on delete cascade,
     foreign key(id_produk) references produk(id_produk) on delete cascade
 );

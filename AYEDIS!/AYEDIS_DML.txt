@@ -1,0 +1,50 @@
+insert into `user_customer`(`id_user_customer`, `nama_user_customer`, `alamat_user_customer`, `no_tlp_user_customer`) values
+('UC-00001', 'Budi', 'jl. Telekomunikasi', '082216643194'),
+('UC-00002', 'Eka Hanif', 'Sukabirus', '82216643195'),
+('UC-00003', 'Taufik Fathurahman', 'Sukabirus', '082216643196'),
+('UC-00004', 'Brenda Irena', 'Umayah', '082216643197'),
+('UC-00005', 'Husnul', 'Umayah', '082216643198'),
+('UC-00006', 'Siti', 'Umayah', '082216643199');
+
+insert into `user_seller`(`id_user_seller`, `nama_user_seller`, `alamat_user_seller`, `no_tlp_user_seller`) values
+('US-00001', 'Khotimah', 'jl. Telekomunikasi', '82216643183'),
+('US-00002', 'Abdurrahman', 'Cikoneng', '82216643184'),
+('US-00003', 'Sabillihaq', 'Sukabirus', '82216643185'),
+('US-00004', 'Haniffah', 'jl. Telekomunikasi', '82216643186'),
+('US-00005', 'Fauzan', 'Umayah', '82216643188'),
+('US-00006', 'Vina', 'Cikoneng', '82216643189');
+
+insert into `toko`(`id_toko`, `id_user_seller`, `nama_toko`, `alamat_toko`, `deskripsi_toko`) values
+('TKO-00001', 'US-00001', 'Maju Teros', 'Jl. Jalan Sore Matep', 'Menyediakan berbagai macam alat perkantoran dan perkuliahan yang murah meriah bos'),
+('TKO-00002', 'US-00002', 'Sabita Store', 'Jl. Jalan Probolinggo', 'Menyediakan berbagai macam alat kosmetik yang original dan murah meriah'),
+('TKO-00003', 'US-00003', 'SNEAKERS HEYHO', 'Jl. Jalan Kenangan', 'Menyediakan berbagai macam sepatu olahraga yang original dan harga terjangkau'),
+('TKO-00004', 'US-00004', 'Wasting Time', 'Jl. Jalan Utara', 'Menyediakan berbagai macam merek jam tangan untuk berbagai aktivitas'),
+('TKO-00005', 'US-00005', 'Beauty Bag', 'Jl. Jalan Umayah', 'Menyediakan berbagai macam tas wanita terkini dengan harga terjangkau');
+
+insert into `kategori`(`id_kategori`, `nama_kategori`, `deskripsi_kategori`) values
+('KTG-000001', 'Elektronik', 'Segala barang yang berhubungan dengan elektronik'),
+('KTG-000002', 'Kecantikan', 'Segala barang yang berhubungan dengan kecantikan'),
+('KTG-000003', 'Makanan Minuman', 'Segala barang yang berhubungan dengan makanan dan minuman'),
+('KTG-000004', 'Pakaian', 'Segala barang yang berhubungan dengan pakaian pria dan wanita'),
+('KTG-000005', 'Aksesoris', 'Segala barang yang berhubungan dengan aksesoris pria dan wanita');
+
+insert into `produk`(`id_produk`, `id_toko`, `id_kategori`, `nama_produk`, `harga`, `diskon`, `tanggal`, `stok`) values
+('PR-00001', 'TKO-00001', 'KTG-000001', 'SAMSUNG GALAXY J5', '2000000', '20', '2019/01/12', '20'),
+('PR-00002', 'TKO-00002', 'KTG-000002', 'THIS IS APRIL DRESS', '250000', '15', '2018/12/28', '15'),
+('PR-00003', 'TKO-00003', 'KTG-000003', 'BONIA WATCH', '1800000', '15', '2019/01/20', '10'),
+('PR-00004', 'TKO-00004', 'KTG-000004', 'BURGER MEAT', '25000', '0', '2019/01/15', '100'),
+('PR-00005', 'TKO-00005', 'KTG-000005', 'WARDAH LIP CREAM 05', '80000', '10', '2018/12/30', '120');
+
+insert into `shop_cart`(`id_shop_cart`, `id_user_customer`, `tanggal`) values
+('SC-00001', 'UC-00001', '2019/01/12'),
+('SC-00002', 'UC-00002', '2018/11/15'),
+('SC-00003', 'UC-00003', '2018/07/03'),
+('SC-00004', 'UC-00004', '2018/12/09'),
+('SC-00005', 'UC-00005', '2019/01/21');
+
+insert into `detail_cart`(`id_shop_cart`, `id_produk`, `jumlah`) values
+('SC-00001', 'PR-00001', '1'),
+('SC-00002', 'PR-00002', '4'),
+('SC-00003', 'PR-00003', '2'),
+('SC-00004', 'PR-00004', '8'),
+('SC-00005', 'PR-00005', '5');
