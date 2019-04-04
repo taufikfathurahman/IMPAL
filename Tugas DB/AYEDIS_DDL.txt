@@ -3,7 +3,8 @@ create table user_customer
     id_user_customer varchar(10),
     nama_user_customer varchar(50),
     alamat_user_customer varchar(100),
-    no_tlp_user_customer varchar(13),
+    email_user_customer varchar(50),
+    password_user_customer varchar(50),
     primary key(id_user_customer)
 );
 
@@ -13,6 +14,8 @@ create table user_seller
     nama_user_seller varchar(50),
     alamat_user_seller varchar(100),
     no_tlp_user_seller varchar(13),
+    email_user_seller varchar(50),
+    password_user_seller varchar(50),
     primary key(id_user_seller)
 );
 

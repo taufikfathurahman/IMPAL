@@ -1,18 +1,18 @@
-insert into `user_customer`(`id_user_customer`, `nama_user_customer`, `alamat_user_customer`, `no_tlp_user_customer`) values
-('UC-00001', 'Budi', 'jl. Telekomunikasi', '082216643194'),
-('UC-00002', 'Eka Hanif', 'Sukabirus', '82216643195'),
-('UC-00003', 'Taufik Fathurahman', 'Sukabirus', '082216643196'),
-('UC-00004', 'Brenda Irena', 'Umayah', '082216643197'),
-('UC-00005', 'Husnul', 'Umayah', '082216643198'),
-('UC-00006', 'Siti', 'Umayah', '082216643199');
+insert into `user_customer`(`id_user_customer`, `nama_user_customer`, `alamat_user_customer`, `email_user_customer`, `password_user_customer`) values
+('UC-00001', 'Budi', 'jl. Telekomunikasi', 'budimangroup@gmail.com', '12345678'),
+('UC-00002', 'Eka Hanif', 'Sukabirus', 'eka@gmail.com', 'jkaska1'),
+('UC-00003', 'Taufik Fathurahman', 'Sukabirus', 'budimangroup@gmail.com', 'dfsfGga5464sas'),
+('UC-00004', 'Brenda Irena', 'Umayah', 'brendairena123@gmail.com', 'sdsdfdsfsd3454'),
+('UC-00005', 'Husnul', 'Umayah', 'husnul123@gmail.com', 'bddf1'),
+('UC-00006', 'Siti', 'Umayah', 'qwert123@gmail.com', 'qwwert12231');
 
-insert into `user_seller`(`id_user_seller`, `nama_user_seller`, `alamat_user_seller`, `no_tlp_user_seller`) values
-('US-00001', 'Khotimah', 'jl. Telekomunikasi', '82216643183'),
-('US-00002', 'Abdurrahman', 'Cikoneng', '82216643184'),
-('US-00003', 'Sabillihaq', 'Sukabirus', '82216643185'),
-('US-00004', 'Haniffah', 'jl. Telekomunikasi', '82216643186'),
-('US-00005', 'Fauzan', 'Umayah', '82216643188'),
-('US-00006', 'Vina', 'Cikoneng', '82216643189');
+insert into `user_seller`(`id_user_seller`, `nama_user_seller`, `alamat_user_seller`, `email_user_seller`, `password_user_seller`) values
+('US-00001', 'Khotimah', 'jl. Telekomunikasi', 'wkdejjlwke1231@gmail.com', '12regfdhtj'),
+('US-00002', 'Abdurrahman', 'Cikoneng', 'asdsda@gmail.com', '13retghrhjt'),
+('US-00003', 'Sabillihaq', 'Sukabirus', 'sdlklfkf34@gmail.com','sfhht6567'),
+('US-00004', 'Haniffah', 'jl. Telekomunikasi', 'kahdkhas5555@gmail.com', 'dfghjy67r'),
+('US-00005', 'Fauzan', 'Umayah', 'dksdfhwefh2@gmail.com', 'qtryutrghtr545432'),
+('US-00006', 'Vina', 'Cikoneng', 'jkhgfdfgh77', 'jhgtfydrdt67898');
 
 insert into `toko`(`id_toko`, `id_user_seller`, `nama_toko`, `alamat_toko`, `deskripsi_toko`) values
 ('TKO-00001', 'US-00001', 'Maju Teros', 'Jl. Jalan Sore Matep', 'Menyediakan berbagai macam alat perkantoran dan perkuliahan yang murah meriah bos'),
