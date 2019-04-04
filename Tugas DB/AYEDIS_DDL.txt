@@ -1,0 +1,72 @@
+create table user_customer
+(
+    id_user_customer varchar(10),
+    nama_user_customer varchar(50),
+    alamat_user_customer varchar(100),
+    email_user_customer varchar(50),
+    password_user_customer varchar(50),
+    primary key(id_user_customer)
+);
+
+create table user_seller
+(
+    id_user_seller varchar(10),
+    nama_user_seller varchar(50),
+    alamat_user_seller varchar(100),
+    no_tlp_user_seller varchar(13),
+    email_user_seller varchar(50),
+    password_user_seller varchar(50),
+    primary key(id_user_seller)
+);
+
+create table toko
+(
+    id_toko varchar(10),
+    id_user_seller varchar(10),
+    nama_toko varchar(50),
+    alamat_toko varchar(100),
+    deskripsi_toko varchar(500),
+    primary key(id_toko),
+    foreign key(id_user_seller) references user_seller(id_user_seller) on delete cascade
+);
+
+create table kategori
+(
+    id_kategori varchar(10),
+    nama_kategori varchar(20),
+    deskripsi_kategori varchar(200),
+    primary key(id_kategori)
+);
+
+create table produk
+(
+    id_produk varchar(10),
+    id_toko varchar(10),
+    id_kategori varchar(10),
+    nama_produk varchar(50),
+    harga DECIMAL(15,2),
+    diskon DECIMAL(15,2),
+    tanggal date,
+    stok integer,
+    primary key(id_produk),
+    foreign key(id_toko) references toko(id_toko) on delete cascade,
+    foreign key(id_kategori) references kategori(id_kategori) on delete cascade
+);
+
+create table shop_cart
+(
+    id_shop_cart varchar(10),
+    id_user_customer varchar(10),
+    tanggal date,
+    primary key(id_shop_cart),
+    foreign key(id_user_customer) references user_customer(id_user_customer) on delete cascade
+);
+
+create table detail_cart
+(
+    id_shop_cart varchar(10),
+    id_produk varchar(10),
+    jumlah integer,
+    foreign key(id_shop_cart) references shop_cart(id_shop_cart) on delete cascade,
+    foreign key(id_produk) references produk(id_produk) on delete cascade
+);
