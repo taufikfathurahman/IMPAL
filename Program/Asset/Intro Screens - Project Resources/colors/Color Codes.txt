@@ -1,3 +1,0 @@
-Color Primary: #109689
-Color Primary Dark: #00797F
-Color Accent: #B5E577
