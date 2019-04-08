@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "438061921170",
+    "firebase_url": "https://ayedisecommerce.firebaseio.com",
+    "project_id": "ayedisecommerce",
+    "storage_bucket": "ayedisecommerce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438061921170:android:d938589e27fac470",
+        "android_client_info": {
+          "package_name": "com.example.ayedis_ecommerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438061921170-beq7aeqollv65oea4s28i3s6esd5vkq7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ayedis_ecommerce",
+            "certificate_hash": "5a810f69ca813d8c6579773739830743adb5cb84"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClwfRJu7AI4Q2pd37rHke3peKXSCOMtVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438061921170-sl3cu11d0bga00qpropqrdbe39758bsq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
