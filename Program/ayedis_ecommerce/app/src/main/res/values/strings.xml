@@ -7,6 +7,7 @@
     <string name="title_activity_login">Sign in</string>
     <string name="userseller_login">Im an User Seller</string>
     <string name="not_userseller_login">Im Not an User Seller</string>
+    <string name="Add_product_button">Add Product</string>
 
     <!-- Login & signup Page -->
     <string name="email">Enter Email</string>

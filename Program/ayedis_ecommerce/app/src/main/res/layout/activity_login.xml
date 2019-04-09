@@ -116,7 +116,8 @@
                 android:text="@string/not_userseller_login"
                 android:layout_alignParentEnd="true"
                 android:layout_below="@+id/loginPassword"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/fragmentColor"
+                android:textStyle="bold"
                 android:layout_marginTop="36dp"
                 android:visibility="invisible"
                 />

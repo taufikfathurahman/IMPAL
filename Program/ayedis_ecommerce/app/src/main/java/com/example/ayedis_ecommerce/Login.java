@@ -136,7 +136,7 @@ public class Login extends AppCompatActivity
                                 Toast.makeText(Login.this, "Anda berhasil masuk :)", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
-                                Intent intent = new Intent(Login.this, AddProduct.class);
+                                Intent intent = new Intent(Login.this, Category.class);
                                 startActivity(intent);
                             }
                             else if (parentDB.equals("UserCustomer"))
