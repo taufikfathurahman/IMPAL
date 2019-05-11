@@ -11,14 +11,24 @@
         android:layout_height="match_parent"
         android:background="@drawable/add_new_product" />
 
+    <ImageView
+        android:id="@+id/category_title_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/product_category_title"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="10dp"
+        />
+
 
     <LinearLayout
         android:id="@+id/linear1_category_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_below="@+id/category_title_id"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="265dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="10dp"
         android:gravity="center"
         android:orientation="horizontal">
@@ -59,13 +69,57 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linear1_category_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/linear1_category_layout"
+        >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/clothes"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/sport"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/bag"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/beauty"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/linear2_category_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linear1_category_layout"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="75dp"
         android:layout_marginRight="10dp"
         android:gravity="center"
         android:orientation="horizontal">
@@ -101,6 +155,50 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:src="@drawable/smartphone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2_category_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/linear2_category_layout"
+        >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/computer"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/sport"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/watch"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/phone"
+            android:gravity="center"
+            />
 
     </LinearLayout>
 

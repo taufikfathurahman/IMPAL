@@ -30,6 +30,33 @@
     <string name="back">Back</string>
     <string name="done">Done</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Strings related to product category name -->
+    <string name="productN">Product Name</string>
+    <string name="productD">Product Description</string>
+    <string name="productP">Product Price</string>
+    <string name="productDisc">Product Discount</string>
+    <string name="productC">Product Category</string>
+    <string name="clothes">Clothes</string>
+    <string name="sport">Sport</string>
+    <string name="bag">Bag</string>
+    <string name="beauty">Beauty</string>
+    <string name="computer">Computer</string>
+    <string name="shoes">Shoes</string>
+    <string name="watch">Watch</string>
+    <string name="phone">Phone</string>
+
+    <!-- Strings related to nav menu name -->
+    <string name="carts">Cart</string>
+    <string name="orders">Orders</string>
+    <string name="categories">Categorie</string>
+    <string name="settings">Settings</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home">Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 </resources>

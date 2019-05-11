@@ -34,8 +34,8 @@
         android:layout_marginLeft="45dp"
         android:layout_marginRight="45dp"
         android:backgroundTint="@color/colorDark"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorRose"
+        android:textColor="@color/colorRose"
+        android:textColorHint="@color/cardview_light_background"
         />
 
     <EditText
@@ -50,8 +50,8 @@
         android:layout_marginLeft="45dp"
         android:layout_marginRight="45dp"
         android:backgroundTint="@color/colorDark"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorRose"
+        android:textColor="@color/colorRose"
+        android:textColorHint="@color/cardview_light_background"
         />
 
     <EditText
@@ -66,8 +66,8 @@
         android:layout_marginLeft="45dp"
         android:layout_marginRight="45dp"
         android:backgroundTint="@color/colorDark"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorRose"
+        android:textColor="@color/colorRose"
+        android:textColorHint="@color/cardview_light_background"
         />
 
     <Button

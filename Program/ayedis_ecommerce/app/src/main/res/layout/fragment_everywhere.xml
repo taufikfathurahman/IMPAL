@@ -6,7 +6,7 @@
     tools:context=".everywhereFragment"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/colorRose">
+    android:background="@drawable/homebg">
 
     <ImageView
         android:id="@+id/imageEverytime"
