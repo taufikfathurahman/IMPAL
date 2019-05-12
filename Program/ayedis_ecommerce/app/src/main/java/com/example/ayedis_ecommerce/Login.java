@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,8 +20,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-//import io.paperdb.Paper;
-
 public class Login extends AppCompatActivity
 {
 
@@ -30,7 +27,6 @@ public class Login extends AppCompatActivity
     private Button LoginButton;
     private ProgressDialog loadingBar;
     private String parentDB = "UserCustomer";
-//    private CheckBox rmbMeCheckbox;
     private TextView userSellerLink, notUserSellerLink;
 
     @Override
@@ -46,15 +42,12 @@ public class Login extends AppCompatActivity
         notUserSellerLink = (TextView) findViewById(R.id.not_userseller_link);
         loadingBar = new ProgressDialog(this);
 
-//        rmbMeCheckbox = (CheckBox) findViewById(R.id.remembermeCheckbox);
-//        Paper.init(this);
-
         LoginButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                LoginUserCustomer();
+                LoginUser();
             }
         });
 
@@ -83,7 +76,7 @@ public class Login extends AppCompatActivity
         });
     }
 
-    private void LoginUserCustomer()
+    private void LoginUser()
     {
         String phone = InputPhone.getText().toString();
         String password = InputPassword.getText().toString();
@@ -103,18 +96,12 @@ public class Login extends AppCompatActivity
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
-            UserCustomerLogin(phone, password);
+            UserLogin(phone, password);
         }
     }
 
-    private void UserCustomerLogin(final String phone, final String password)
+    private void UserLogin(final String phone, final String password)
     {
-//        if (rmbMeCheckbox.isChecked())
-//        {
-//            Paper.book().write(Prevalent.UserCustomerPhoneKey, phone);
-//            Paper.book().write(Prevalent.UserCustomerPasswordKey, password);
-//        }
-
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
 
@@ -131,23 +118,23 @@ public class Login extends AppCompatActivity
                     {
                         if (userCustomerData.getPassword().equals(password))
                         {
+                            Intent intent = null;
                             if (parentDB.equals("UserSeller"))
                             {
                                 Toast.makeText(Login.this, "Anda berhasil masuk :)", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
-                                Intent intent = new Intent(Login.this, Category.class);
-                                startActivity(intent);
+                                intent = new Intent(Login.this, Category.class);
                             }
                             else if (parentDB.equals("UserCustomer"))
                             {
                                 Toast.makeText(Login.this, "Anda berhasil masuk :)", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
-                                Intent intent = new Intent(Login.this, Home.class);
+                                intent = new Intent(Login.this, customerCategory.class);
                                 Prevalent.onlineUserCustomer = userCustomerData;
-                                startActivity(intent);
                             }
+                            startActivity(intent);
                         }
                         else
                         {

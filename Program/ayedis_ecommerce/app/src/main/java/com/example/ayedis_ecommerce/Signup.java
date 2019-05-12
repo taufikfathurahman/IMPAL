@@ -25,7 +25,7 @@ public class Signup extends AppCompatActivity
 {
 
     private Button CreateAccountButton;
-    private EditText InputEmail, InputPassword, InputPhoneNumber, InputAddress;
+    private EditText InputUserName, InputPassword, InputPhoneNumber, InputAddress;
     private ProgressDialog loadingBar;
 
     @Override
@@ -35,7 +35,7 @@ public class Signup extends AppCompatActivity
         setContentView(R.layout.activity_signup);
 
         CreateAccountButton = (Button) findViewById(R.id.signupButton);
-        InputEmail = (EditText) findViewById(R.id.sgEmail);
+        InputUserName = (EditText) findViewById(R.id.sgUserName);
         InputPassword = (EditText) findViewById(R.id.sgPassword);
         InputPhoneNumber = (EditText) findViewById(R.id.sgTlp);
         InputAddress = (EditText) findViewById(R.id.sgAlamat);
@@ -53,12 +53,12 @@ public class Signup extends AppCompatActivity
 
     private void CreateAccount()
     {
-        String email = InputEmail.getText().toString();
+        String username = InputUserName.getText().toString();
         String password = InputPassword.getText().toString();
         String phone = InputPhoneNumber.getText().toString();
         String address = InputAddress.getText().toString();
 
-        if (TextUtils.isEmpty(email))
+        if (TextUtils.isEmpty(username))
         {
             Toast.makeText(this, "Emailnya dilengkapi ya...", Toast.LENGTH_SHORT).show();
         }
@@ -81,11 +81,11 @@ public class Signup extends AppCompatActivity
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
-            ValidatephoneNumber(email, password, phone, address);
+            ValidatePhoneNumber(username, password, phone, address);
         }
     }
 
-    private void ValidatephoneNumber(final String email, final String password, final String phone, final String address)
+    private void ValidatePhoneNumber(final String username, final String password, final String phone, final String address)
     {
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
@@ -98,7 +98,7 @@ public class Signup extends AppCompatActivity
                 if (!(dataSnapshot.child("UserCustomer").child(phone).exists()))
                 {
                     HashMap<String, Object> userdataMap = new HashMap<>();
-                    userdataMap.put("email", email);
+                    userdataMap.put("username", username);
                     userdataMap.put("password", password);
                     userdataMap.put("phone", phone);
                     userdataMap.put("address", address);

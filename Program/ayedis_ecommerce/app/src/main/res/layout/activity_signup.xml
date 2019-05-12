@@ -42,12 +42,12 @@
                     android:background="@drawable/avatar_picture" />
 
                 <EditText
-                    android:id="@+id/sgEmail"
+                    android:id="@+id/sgUserName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:backgroundTint="@color/colorWhite"
-                    android:hint="@string/email"
+                    android:hint="@string/user_name"
                     android:imeOptions="actionNext"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/colorWhite"

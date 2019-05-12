@@ -2,26 +2,26 @@ package com.example.ayedis_ecommerce.Model;
 
 public class UserCustomer
 {
-    private String email, password, phone, address;
+    private String username, password, phone, address;
 
     public UserCustomer()
     {
 
     }
 
-    public UserCustomer(String email, String password, String phone, String address) {
-        this.email = email;
+    public UserCustomer(String username, String password, String phone, String address) {
+        this.username = username;
         this.password = password;
         this.phone = phone;
         this.address = address;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUsername() {
+        return username;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {

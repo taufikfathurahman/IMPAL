@@ -10,7 +10,7 @@
     <string name="Add_product_button">Add Product</string>
 
     <!-- Login & signup Page -->
-    <string name="email">Enter Email</string>
+    <string name="user_name">Enter User Name</string>
     <string name="password">Enter Password</string>
     <string name="phone_number">Enter Phone Number</string>
     <string name="address">Enter Address</string>

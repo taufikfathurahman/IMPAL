@@ -36,6 +36,7 @@ public class Home extends AppCompatActivity
 
     private DatabaseReference ProductRef;
     private RecyclerView recyclerView;
+    private String CategoryName;
     RecyclerView.LayoutManager layoutManager;
 
     @Override
@@ -43,7 +44,9 @@ public class Home extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ProductRef = FirebaseDatabase.getInstance().getReference().child("Products");
+        CategoryName = getIntent().getExtras().get("category").toString();
+
+        ProductRef = FirebaseDatabase.getInstance().getReference("Products");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Home");
@@ -71,7 +74,7 @@ public class Home extends AppCompatActivity
         TextView usernameTextView = headerView.findViewById(R.id.user_profile_name);
         CircleImageView profileImageView = headerView.findViewById(R.id.user_profile_image);
 
-        usernameTextView.setText(Prevalent.onlineUserCustomer.getEmail());
+        usernameTextView.setText(Prevalent.onlineUserCustomer.getUsername());
 
         recyclerView = findViewById(R.id.recycler_menu);
         recyclerView.setHasFixedSize(true);
@@ -83,13 +86,13 @@ public class Home extends AppCompatActivity
     protected void onStart() {
         super.onStart();
 
-        FirebaseRecyclerOptions<Products> options = new FirebaseRecyclerOptions.Builder<Products>().setQuery(ProductRef, Products.class).build();
+        FirebaseRecyclerOptions<Products> options = new FirebaseRecyclerOptions.Builder<Products>().setQuery(ProductRef.orderByChild("Category").equalTo(CategoryName), Products.class).build();
 
         FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter = new FirebaseRecyclerAdapter<Products, ProductViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull Products model) {
                 holder.textProductName.setText(model.getProductName());
-                holder.textProductDiscount.setText("Discount = " + model.getProductDiscount());
+                holder.textProductDiscount.setText("Discount = " + model.getProductDiscount() + "%");
                 holder.textProductPrice.setText("Price = " + model.getProductPrice() + "$");
                 Picasso.get().load(model.getImage()).into(holder.imageView);
             }
@@ -118,19 +121,14 @@ public class Home extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -138,10 +136,8 @@ public class Home extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_cart) {

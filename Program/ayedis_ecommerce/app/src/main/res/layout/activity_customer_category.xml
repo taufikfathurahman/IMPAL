@@ -4,37 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Category">
+    tools:context=".customerCategory">
 
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/add_new_product" />
-
-    <ImageView
-        android:id="@+id/category_title_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/product_category_title"
-        android:layout_marginTop="250dp"
-        android:layout_marginLeft="10dp"
-        />
+        android:background="@drawable/product_category" />
 
 
     <LinearLayout
-        android:id="@+id/linear1_category_layout"
+        android:id="@+id/linear1_customer_category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/category_title_id"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="320dp"
         android:layout_marginRight="10dp"
         android:gravity="center"
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/category_clothes"
+            android:id="@+id/c_clothes"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
@@ -43,7 +33,7 @@
             />
 
         <ImageView
-            android:id="@+id/category_sport"
+            android:id="@+id/c_sport"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
@@ -51,7 +41,7 @@
             android:src="@drawable/basketball" />
 
         <ImageView
-            android:id="@+id/category_bag"
+            android:id="@+id/c_bag"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
@@ -59,7 +49,7 @@
             android:src="@drawable/briefcase" />
 
         <ImageView
-            android:id="@+id/category_beauty"
+            android:id="@+id/c_beauty"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
@@ -69,13 +59,13 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linear1_category_name"
+        android:id="@+id/linear1_customer_category_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:gravity="center"
-        android:layout_below="@+id/linear1_category_layout"
+        android:layout_below="@+id/linear1_customer_category"
         >
 
         <TextView
@@ -107,10 +97,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linear2_category_layout"
+        android:id="@+id/linear2_customer_category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linear1_category_layout"
+        android:layout_below="@+id/linear1_customer_category"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="75dp"
@@ -119,7 +109,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/category_computer"
+            android:id="@+id/c_computer"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
@@ -127,7 +117,7 @@
             android:src="@drawable/laptop" />
 
         <ImageView
-            android:id="@+id/category_shoes"
+            android:id="@+id/c_shoes"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
@@ -135,7 +125,7 @@
             android:src="@drawable/shoe" />
 
         <ImageView
-            android:id="@+id/category_watch"
+            android:id="@+id/c_watch"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
@@ -143,7 +133,7 @@
             android:src="@drawable/watch" />
 
         <ImageView
-            android:id="@+id/category_phone"
+            android:id="@+id/c_phone"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
@@ -157,7 +147,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_below="@+id/linear2_category_layout"
+        android:layout_below="@+id/linear2_customer_category"
         android:gravity="center"
         >
 
