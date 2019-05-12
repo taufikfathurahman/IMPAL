@@ -145,7 +145,8 @@ public class Home extends AppCompatActivity
         } else if (id == R.id.nav_orders) {
 
         } else if (id == R.id.nav_categories) {
-
+            Intent intent = new Intent(Home.this, customerCategory.class);
+            startActivity(intent);
         } else if (id == R.id.nav_settings) {
 
         } else if (id == R.id.nav_logout) {
