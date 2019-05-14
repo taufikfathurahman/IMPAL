@@ -85,18 +85,6 @@
 
             </LinearLayout>
 
-            <com.rey.material.widget.CheckBox
-                android:id="@+id/remembermeCheckbox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/loginPassword"
-                android:layout_marginTop="30dp"
-                style="@style/Material.Drawable.CheckBox"
-                android:text="Remember Me"
-                android:textColor="@color/fragmentColor"
-                android:gravity="center_vertical"
-                />
-
             <TextView
                 android:id="@+id/userseller_link"
                 android:layout_width="wrap_content"
@@ -126,8 +114,8 @@
                 android:id="@+id/loginButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/remembermeCheckbox"
-                android:layout_marginTop="40dp"
+                android:layout_below="@id/loginPassword"
+                android:layout_marginTop="80dp"
                 android:background="@drawable/button_white"
                 android:text="@string/Login"
                 android:textAllCaps="false"
